@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link rel="stylesheet" href="../../css/contacto.css">
+</head>
+<body>
+
+    <!-- !HEADER -->
+  <header class="header">
+
+    <a class="logo" href="/index.html">MS</a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <i class="fa-solid fa-xmark" id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+
+      <a class="nav-link" href="/pages/contacto/contacto.html">Contacto</a>
+
+      <a class="nav-link" href="/pages/sobre-nosotros/sobre-nosotros.html">Sobre Nosotros</a>
+
+      <a class="nav-link" href="/pages/registro/registro.html">Registrate</a>   
+
+    </nav>
+
+    <div class="user-menu">
+      <div id="user-header-name" class="user-icon">
+        
+      </div>
+      <div id="user-action">
+        
+      </div>
+      
+    </div>
+
+  </header>
+
+   <!-- !CAROUSEL MAIN  -->
+   <main class="container">
+    <div class="row">
+        <!-- Columna para el mapa -->
+        <div class="col-md-6">
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.616410629827!2d-65.23941358815001!3d-26.788494737929575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225da0b64a3afd%3A0x6d30ddec6a9907a!2sAmpliaci%C3%B3n%20Mu%C3%B1ecas%20III%2C%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses!2sar!4v1697347227830!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- Columna para el formulario de contacto -->
+        <div class="col-md-6">
+            <div class="contact-container text-light">
+                <h2>Contacto</h2>
+                <form action="tu_script_de_procesamiento.php" method="post">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+  
+
+
+
+  <footer class="">
+    <div class="column">
+      <a href="#"><i class="fa-brands fa-facebook social-icon"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram social-icon"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp social-icon"></i></a>
+    </div>
+    <div class="column">
+      <a class="logo" href="index.html">Mundo Sport</a>
+    </div>
+    <div class="column">
+      <p>Direccion: San Miguel de Tucuman</p>
+      <p>Telefono: 381123456</p>
+      <p>Email: mundo@sport.com</p>
+    </div>
+  </footer>
+   
+  <script src="/js/user-info.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

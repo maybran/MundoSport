@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <script src="/js/guard.js"></script>
+
+</head>
+<body>
+
+    <!-- !HEADER -->
+    <header class="header">
+
+        <a class="logo" href="/index.html">MS</a>
+    
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
+          <i class="fa-solid fa-xmark" id="close-icon"></i>
+        </label>
+    
+        <nav class="navbar">
+    
+          <a class="nav-link" href="/pages/contacto/contacto.html">Contacto</a>
+    
+          <a class="nav-link" href="/pages/sobre-nosotros/sobre-nosotros.html">Sobre Nosotros</a>
+    
+          <a class="nav-link" href="/pages/registro/registro.html">Registrate</a>   
+        </nav>
+    
+        <div class="user-menu">
+          <div id="user-header-name" class="user-icon">
+            
+          </div>
+          <div id="user-action">
+            
+          </div>
+          
+        </div>
+    
+      </header>
+
+  <main>
+    <div class="container-xxl">
+
+        <button type="button" class="btn btn-warning m-2" data-bs-toggle="modal" data-bs-target="#formModal">
+            Añadir
+        </button>
+    
+        <div class="row">
+            
+            <div class="col-12 col-md-12 bg-dark">
+                <!-- #Tabla -->
+                <div class="mb-3">
+                    <label for="buscar" class="form-label">Buscar</label>
+                    <input                         
+                        type="text" 
+                        class="form-control" 
+                        id="buscar" 
+                        placeholder="Nombre Producto"
+                    >                            
+                </div>
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Descripcion del Producto</th>
+                        <th scope="col">Precio</th>              
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                       
+                        
+                    </tbody>
+                </table>
+            </div>                          
+        </div>
+    </div>
+  </main>
+  
+
+    <!-- Modal -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="modal-product" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <!-- #Formulario -->
+                <form class="text-light m-4" id="form-producto">
+                    <!-- Input Producto -->
+                    <div class="mb-3">
+                        <label for="titulo-producto" class="form-label">Nombre del Producto</label>
+                        <input 
+                            name="titulo"
+                            type="text" 
+                            class="form-control" 
+                            id="titulo-producto" 
+                            placeholder="EJ: Remera Adidas"
+                            required
+                            minlength="3"
+                            maxlength="70"
+                            
+                        >                            
+                    </div>
+                    <!-- Input precio y categoria-->
+                    <div class="mb-3 d-flex gap-3">
+                        <div class="w-100">
+                            <label for="precio-producto" class="form-label">Precio</label>
+                            <input 
+                                name="precio"
+                                type="number" 
+                                class="form-control" 
+                                id="precio-producto" 
+                                placeholder="1000"
+                                required
+                                minlength="1"
+                                maxlength="200000"
+                                step=".01"
+                                
+                            > 
+                        </div>
+                        <div class="w-100">
+                            <label for="categoria-producto" class="form-label">Categoria</label>
+                            <select class="form-select" name="categoria" id="categoria-producto">
+                                <option value="remera">Remera</option>
+                                <option value="top">Top</option>
+                                <option value="short">Short</option>
+                                <option value="pantalon">Pantalon</option>
+                                <option value="calza">Calza</option>
+                            </select>
+                        </div>                
+                    </div>
+                    <!-- Input image -->
+                    <div class="mb-3">
+                        <label for="imagen-producto" class="form-label">Imagen</label>
+                        <input 
+                            name="imagen"
+                            type="url" 
+                            class="form-control" 
+                            id="imagen-producto"
+                            placeholder="URL"
+                            required
+                            minlength="3"
+                            maxlength="300"
+                            
+                        >                            
+                    </div>
+
+
+                    <!-- Textarea -->
+                    <div class="mb-3">
+                        <label for="descripcion-producto" class="form-label">Describe tu Producto</label>
+                        <textarea class="form-control" id="descripcion-producto" rows="3" required minlength="8" maxlength="400" name="descripcion" placeholder="Remera Adidas hombre - Jaspeada - Talle XXL"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mb-3">Agregar Producto</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/js/user-info.js"></script>
+  <script src="/js/admin.js"></script>
+  <!-- <script src="/js/home.js"></script> -->
+  <!-- <script src="/js/storage.js"></script> -->
+</body>
+</html>
